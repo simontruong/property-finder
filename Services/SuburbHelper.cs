@@ -53,6 +53,10 @@ public class SuburbHelper
             suburbProfile.UnitMedianRent1Br = r1;
             suburbProfile.UnitMedianRent2Br = r2;
             suburbProfile.UnitMedianRent3Br = r3;
+
+            if (r1 != 0 && b1 != 0){suburbProfile.UnitMedianYield1Br = (float)r1*52/b1;}
+            if (r2 != 0 && b2 != 0){suburbProfile.UnitMedianYield2Br = (float)r2*52/b2;}
+            if (r3 != 0 && b3 != 0){suburbProfile.UnitMedianYield3Br = (float)r3*52/b3;}
         }
 
         //houses
@@ -76,6 +80,10 @@ public class SuburbHelper
             suburbProfile.HouseMedianRent2Br = r1;
             suburbProfile.HouseMedianRent3Br = r2;
             suburbProfile.HouseMedianRent4Br = r3;
+
+            if (r1 != 0 && b1 != 0){suburbProfile.HouseMedianYield2Br = (float)r1*52/b1;}
+            if (r2 != 0 && b2 != 0){suburbProfile.HouseMedianYield3Br = (float)r2*52/b2;}
+            if (r3 != 0 && b3 != 0){suburbProfile.HouseMedianYield4Br = (float)r3*52/b3;}
         }
 
         return suburbProfile;
